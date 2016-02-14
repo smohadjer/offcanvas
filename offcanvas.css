@@ -1,0 +1,58 @@
+#menu {
+	display: none;
+}
+
+nav {
+	font-size: 0.9em;
+	box-sizing: border-box;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 270px;
+	overflow-y: auto;
+}
+
+.content {
+	background: #fff;
+	position: relative;
+	left: 0;
+	-webkit-transition: left 400ms ease 0s;
+	transition: left 400ms ease 0s;
+}
+
+@media (max-width: 767px)  {
+	#overall-wrapper {
+		overflow-x: hidden; /* to avoid horizontal swiping of page when offcanvas is visible */
+	}
+
+	#overall-wrapper .content {
+		transition-timing-function: cubic-bezier(0.175, 0.885, 0.590, 1.175); /* custom */
+	}
+
+	#overall-wrapper.off-left {
+		background: #eee;	/* for offcanvas nav */
+	}
+
+	#overall-wrapper.off-left .content {
+		left: 270px;
+	}
+
+	#overall-wrapper.off-left .content #menu i.fa-bars:before {
+		content: "\f00d";
+	}
+
+	#menu {
+		padding: 15px 10px;
+		color: #fff;
+		background: #666;
+		font-size: 1.1em;
+		cursor: pointer;
+		display: block;
+	}
+
+	#menu span {
+		font-weight: bold;
+		padding-left: 7px;
+	}
+}
