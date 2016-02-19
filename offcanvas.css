@@ -21,7 +21,7 @@ body {
 		position: static;
 	}
 
-	.offcanvas.end .main {
+	.offcanvas.end body > *:not(nav):not(.menu) {
 		display: none;
 	}
 

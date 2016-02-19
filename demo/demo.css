@@ -5,7 +5,7 @@ header, footer {
 	background: #ccc;
 }
 
-.main section {
+article {
 	margin: 1em;
 }
 
@@ -55,7 +55,8 @@ nav li a {
 		float: left;
 		border: none;
 	}
-	.main {
+
+	nav + * {
 		clear: both;
 	}
 }
