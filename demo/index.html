@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Minimal OffCanvas Navigation</title>
+		<meta name="description" content="OffCanvas Navigation">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="demo.css">
+		<link rel="stylesheet" href="../offcanvas.css">
+		<script src="jquery.js"></script>
+		<script>
+			$(document).ready(function() {
+				$('.menu span').on('click', function() {
+					$('html').removeClass('end');
+					$('html').toggleClass('offcanvas');
+				});
+
+				$('nav').on('transitionend', function(e) {
+					console.log('transtion end');
+					$('html').addClass('end');
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<!-- div.menu shows only on mobile -->
+		<div class="menu">
+			<span></span>
+		</div>
+		<nav>
+			<ul>
+				<li><a href="javascript:void(0);">Item 1</a></li>
+				<li><a href="javascript:void(0);">Item 2 lorem ipsum</a></li>
+				<li><a href="javascript:void(0);">Item 3 duis aute irure</a></li>
+				<li><a href="javascript:void(0);">Item 4 excepteur</a></li>
+			</ul>
+		</nav>
+		<div class="main">
+			<header>Header of the page goes here...</header>
+			<section>
+				<h2>Main content goes here...</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			</section>
+			<footer>Footer of the page goes here...</footer>
+		</div>
+	</body>
+</html>

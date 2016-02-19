@@ -1,0 +1,61 @@
+/* demo styles not required by offcanvas */
+
+header, footer {
+	padding: 1em;
+	background: #ccc;
+}
+
+.main section {
+	margin: 1em;
+}
+
+nav {
+	padding: 0;
+	margin: 0;
+}
+nav ul {
+	margin: 0;
+	padding: 0;
+}
+nav li {
+	padding: 0.5em 1em;
+	border-bottom: solid 1px #ccc;
+	list-style: none;
+	margin: 0;
+}
+
+nav li a {
+	text-decoration: none;
+	color: #39f;
+}
+
+.menu {
+	padding: 0.5em 1em;
+	border-bottom: solid 1px #ccc;
+}
+.menu span {
+	font-size: 1.2em;
+	color: #39f;
+	font-weight: bold;
+	cursor: pointer;
+	font-family: arial, verdana, sans-serif;
+}
+
+.menu span:before {
+	content: "Menu";
+}
+
+
+.offcanvas .menu span:before {
+	content: "< Back";
+}
+
+@media screen and (min-width: 600px) {
+	nav ul li {
+		float: left;
+		border: none;
+	}
+	.main {
+		clear: both;
+	}
+}

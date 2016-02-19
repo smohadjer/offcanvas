@@ -1,58 +1,44 @@
-#menu {
+body {
+	margin: 0;
+}
+
+.menu {
 	display: none;
 }
 
-nav {
-	font-size: 0.9em;
-	box-sizing: border-box;
-	height: 100%;
-	position: absolute;
-	left: 0;
-	top: 0;
-	width: 270px;
-	overflow-y: auto;
-}
-
-.content {
-	background: #fff;
-	position: relative;
-	left: 0;
-	-webkit-transition: left 400ms ease 0s;
-	transition: left 400ms ease 0s;
-}
-
-@media (max-width: 767px)  {
-	#overall-wrapper {
-		overflow-x: hidden; /* to avoid horizontal swiping of page when offcanvas is visible */
+@media screen and (max-width: 599px) {
+	.offcanvas,
+	.offcanvas body	{
+		height: 100%;
 	}
 
-	#overall-wrapper .content {
-		transition-timing-function: cubic-bezier(0.175, 0.885, 0.590, 1.175); /* custom */
+	.offcanvas nav {
+		left: 0;
+		box-shadow: 3px 1px 3px 0px rgba(0,0,0,0.2);
 	}
 
-	#overall-wrapper.off-left {
-		background: #eee;	/* for offcanvas nav */
+	.offcanvas.end nav {
+		position: static;
 	}
 
-	#overall-wrapper.off-left .content {
-		left: 270px;
+	.offcanvas.end .main {
+		display: none;
 	}
 
-	#overall-wrapper.off-left .content #menu i.fa-bars:before {
-		content: "\f00d";
-	}
-
-	#menu {
-		padding: 15px 10px;
-		color: #fff;
-		background: #666;
-		font-size: 1.1em;
-		cursor: pointer;
+	.menu {
 		display: block;
 	}
 
-	#menu span {
-		font-weight: bold;
-		padding-left: 7px;
+	nav {
+		position: absolute;
+		box-sizing: border-box;
+		background: #fff;
+
+		left: calc(100% * -1);
+		width: 100%;
+		height: 100%;
+		overflow: auto;
+		transition: left 0.4s;
+        transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000); /* easeOutCubic */
 	}
 }
