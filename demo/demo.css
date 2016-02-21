@@ -1,11 +1,17 @@
 /* demo styles not required by offcanvas */
 body {
 	margin: 0;
-	background: yellow;
+	background: #fff;
 }
 
-header, footer {
+header {
+	padding: 0.5em 1em;
+	border-bottom: solid 1px #ccc;
+}
+
+footer {
 	padding: 1em;
+	border-top: solid 1px #ccc;
 }
 
 article {
@@ -16,10 +22,12 @@ nav {
 	padding: 0;
 	margin: 0;
 }
+
 nav ul {
 	margin: 0;
 	padding: 0;
 }
+
 nav li {
 	padding: 0.5em 1em;
 	border-bottom: solid 1px #ccc;
@@ -27,31 +35,21 @@ nav li {
 	margin: 0;
 }
 
+nav li:last-child {
+	border-bottom: none;
+}
+
 nav li a {
 	text-decoration: none;
 	color: #39f;
 }
 
-.menu {
-	padding: 0.5em 1em;
-	border-bottom: solid 1px #ccc;
-	position: fixed;
-}
 .menu span {
-	font-size: 1.2em;
+	font-size: 1.1em;
 	color: #39f;
 	font-weight: bold;
 	cursor: pointer;
 	font-family: arial, verdana, sans-serif;
-}
-
-.menu span:before {
-	content: "Menu";
-}
-
-
-.offcanvas .menu span:before {
-	content: "< Back";
 }
 
 @media screen and (min-width: 600px) {
@@ -65,11 +63,11 @@ nav li a {
 	}
 }
 
-/* version with menu fixed */
+/* version with sticky menu bar */
+/*
 @media screen and (max-width: 599px) {
 	.menu {
 		position: fixed;
-		background: #fff;
 		width: 100%;
 		top: 0;
 	}
@@ -82,3 +80,4 @@ nav li a {
 		padding-top: 40px;
 	}
 }
+*/
