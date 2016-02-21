@@ -44,7 +44,7 @@ nav li a {
 	color: #39f;
 }
 
-.menu span {
+.mobile-menu span {
 	font-size: 1.1em;
 	color: #39f;
 	font-weight: bold;
@@ -63,10 +63,10 @@ nav li a {
 	}
 }
 
-/* version with sticky menu bar */
+/* version with sticky mobile-menu bar */
 /*
 @media screen and (max-width: 599px) {
-	.menu {
+	.mobile-menu {
 		position: fixed;
 		width: 100%;
 		top: 0;

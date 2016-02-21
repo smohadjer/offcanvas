@@ -1,4 +1,4 @@
-.menu {
+.mobile-menu {
 	display: none;
 }
 
@@ -26,27 +26,25 @@
 		position: static;
 	}
 
-	.offcanvas.end body > *:not(nav):not(.menu) {
+	.offcanvas.end body > *:not(nav):not(.mobile-menu) {
 		display: none;
 	}
 
-	.menu {
+	.mobile-menu {
 		display: block;
 		background: #ddd;
 	}
 
-	.menu span {
+	.mobile-menu span {
 		padding: 1em;
 		display: block;
 	}
 
-	.menu span:before {
-		content: "Mobile nav";
+	.mobile-menu span:before {
+		content: attr(data-label);
 	}
 
-	.offcanvas .menu span:before {
-		content: "< Back";
+	.offcanvas .mobile-menu span:before {
+		content: attr(data-label-back);
 	}
-
-
 }
