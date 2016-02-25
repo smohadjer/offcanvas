@@ -1,0 +1,18 @@
+{
+  "name": "offcanvas",
+  "version": "0.0.1",
+  "homepage": "https://github.com/smohadjer/offcanvas",
+  "authors": [
+    "Saeid Mohadjer <saeid@fastmail.fm>"
+  ],
+  "description": "offcanvas navigation",
+  "main": ["offcanvas.css", "offcanvas.js"],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
