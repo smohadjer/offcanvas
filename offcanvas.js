@@ -1,11 +1,9 @@
 $(document).ready(function() {
-	var eventName = 'click';
+
+	/* http://perfectionkills.com/detecting-event-support-without-browser-sniffing/ */
+	var eventName = ('ontouchstart' in document.documentElement) ? 'touchstart' : 'click';
 	var offcanvasIsInitialized = false;
 	var mql = window.matchMedia("(max-width: 599px)");
-
-	if ('ontouchstart' in document.documentElement) {
-		eventName = 'touchstart';
-	}
 
 	mql.addListener(mqHandler);
 	mqHandler(mql);
